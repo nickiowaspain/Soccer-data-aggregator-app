@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+  <!--<script type="text/javascript" src="angular-route/angular-route.min.js"></script>-->
+ 
+  <!--<script type="text/javascript" src="./homeController.js"></script>-->
+  
+  <script type="text/javascript" src="./app.js"></script>
+
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.9.4/angular-material.min.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+  <div ng-app='myApp'>
+    <div ng-controller="teamController">
+      <p ng-repeat="string in dataArr track by $index">
+        {{string}}
+        <button ng-click="log($index)">show index</button>
+      </p>
+      <button ng-click="getTeamData()">call getTeamData</button>
+      <h1 ng-if="true">hey</h1>
+      <h1 ng-if="!true">will it show?</h1>
+    </div>
+  </div>
+
+  <!--<div class="container" ng-view></div>-->
+  <!--<a ng-href="http://localhost:3000/#/">Home</a>
+  <a ng-href="http://localhost:3000/#/about">About</a>-->
+
+</body>
+</html>

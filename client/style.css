@@ -1,0 +1,21 @@
+
+body {
+background-image: url(soccer.jpg);
+color: white;
+}
+.container {
+  
+  text-align: center;
+}
+
+.input-box {
+  width: 300px;
+  border-radius: 5px;
+}
+
+.msg-container {
+  display: inline-block;
+  height: 900px;
+  width: 600px;
+  overflow: auto;
+}
