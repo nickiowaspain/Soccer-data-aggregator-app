@@ -16,15 +16,30 @@
    <link rel="stylesheet" href="style.css">
 </head>
 <body> 
-  <div ng-app='myApp'>
+  <div ng-app='myApp' class="wrapper">
     <div ng-controller="teamController">
-      <p ng-repeat="string in dataArr track by $index">
-        {{string}}
-        <button ng-click="log($index)">show index</button>
-      </p>
-      <button ng-click="getTeamData()">call getTeamData</button>
-      <h1 ng-if="true">hey</h1>
-      <h1 ng-if="!true">will it show?</h1>
+      <form ng-submit="save()">
+      <input type="text" placeholder="Search team here" ng-model="team" class="input-search"></input>
+     <!--<button type="submit">Save</button>-->
+      </form>
+      <div class="result-container" ng-repeat="team1 in dataArr | filter: team">
+        <ul class="team-design"> 
+          <li class="team-name">{{team1.teamName}}</li>
+          <li>Position: {{team1.position}}</li>
+          <li>Points: {{team1.points}}</li>
+          <li>Played Games: {{team1.playedGames}}</li>
+          <li>Wins: {{team1.wins}}</li>
+          <li>Draws: {{team1.draws}}</li>
+          <li>Losses: {{team1.losses}}</li>
+          <li>Goals: {{team1.goals}}</li>
+          <li>Goals Against: {{team1.goalsAgainst}}</li>
+          <li>Goal Difference: {{team1.goalDifference}}</li>
+          
+        </ul>
+      </div>
+      <button class="button-but" ng-click="getTeamData()">Load League</button>
+      <!--<h1 ng-if="true">hey</h1>
+      <h1 ng-if="!true">will it show?</h1>-->
     </div>
   </div>
 
@@ -34,3 +49,4 @@
 
 </body>
 </html>
+
