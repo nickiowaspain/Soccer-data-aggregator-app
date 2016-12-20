@@ -3,25 +3,21 @@ body {
 background-image: url(soccer.jpg);
 background-size: cover;
 background-position: fixed;
-
 }
-
 
 .wrapper {
   height: 100vh;
   width: 100%;
   position: fixed;
   overflow-y: scroll;
-   
-}
+  }
+
 .result-container {
   margin-bottom: 410px;
  font-weight: bold;
   color: white;
   text-shadow: 2px 2px #000;
-  
-   
-}
+  }
 
 .input-search {
   width: 300px;

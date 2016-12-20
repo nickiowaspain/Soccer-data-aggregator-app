@@ -49,13 +49,6 @@ angular
       console.log(index);
     } 
   }])
-// .then(function(data) {
-            //     console.log(data)
-            //     factoryObj.data = data;
-            //     callback(factoryObj.data);
-            // }).catch(function(data) {
-            //     console.log('catch data: ', data)
-            //     console.log('failed');
-            // }); 
+
 
 
